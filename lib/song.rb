@@ -29,4 +29,12 @@ class Song
     song
   end
   
+  def artist
+    @artist
+  end
+  
+  def artist=(name)
+    @artist = name
+  end
+  
 end
