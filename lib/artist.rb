@@ -14,11 +14,12 @@ class Artist
   end
   
   def self.destroy_all
-    @@all = []
+    # @@all = []
+    self.all.clear
   end
   
   def save
-    @@all = []
+    @@all << self
   end
   
   def self.create(name)
@@ -30,9 +31,7 @@ class Artist
 	def add_song
 	  song.artist = self if song.artist == nil
 	  self.songs << song unless self.songs.include?(song)
-	  
-	  # or instead:unless song.artistsong.artist == nil
-  
+	   # or instead:unless song.artistsong.artist == nil
   end
-  
+	  
 end

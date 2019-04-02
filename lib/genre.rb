@@ -2,7 +2,7 @@ class Genre
   
   @@all = []
   
-  attr_accessor :name
+  attr_accessor :name, :songs
   
   def initialize(name)
     @name = name
@@ -13,11 +13,13 @@ class Genre
   end
   
   def self.destroy_all
-    @@all = []
+    # @@all = []
+    self.all.clear
   end
   
   def save
-    @@all = []
+    # @@all = []
+    self.class.all << self
   end
   
   def self.create(name)
