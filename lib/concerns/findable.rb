@@ -1,3 +1,2 @@
 module Concerns::Findable
-  
 end
